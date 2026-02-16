@@ -1,21 +1,28 @@
-'use strict';
+// Music Portal PWA - app.js
 
-// Register service worker
+// Initialize the service worker for offline capabilities
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-            console.log('ServiceWorker registration failed: ', err);
-        });
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+                console.error('Service Worker registration failed:', error);
+            });
     });
 }
 
-// App logic goes here
-function init() {
-    console.log('Music Portal App Initialized');
-    // Additional app logic
+// Fetching the music data
+async function fetchMusicData() {
+    try {
+        const response = await fetch('https://api.example.com/music');
+        const musicData = await response.json();
+        // Process and display music data
+        console.log(musicData);
+    } catch (error) {
+        console.error('Error fetching music data:', error);
+    }
 }
 
-// Start the app
-init();
+fetchMusicData();
