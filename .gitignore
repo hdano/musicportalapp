@@ -1,16 +1,17 @@
-# Node.js
+# Node modules
 node_modules/
-package-lock.json
 
-# Environment Variables
+# Build files
+/build/
+
+# Environment variables
 .env
 
 # IDE files
-.idea/
-*.swp
 *.sublime-workspace
 *.sublime-project
+*.vscode/
 
-# Build artifacts
-/dist/
-/build/
+# Miscellaneous files
+.DS_Store
+Thumbs.db
