@@ -65,7 +65,7 @@ async function enableNotifications() {
     notifyBtn.disabled = true;
   } catch (err) {
     console.error(err);
-    setStatus("Error enabling notifications. Check console.");
+    setStatus("Error enabling notifications. Error: " + err.message);
   }
 }
 
