@@ -20,10 +20,10 @@ async function registerServiceWorkers() {
   }
 
   // Main service worker (for caching, etc.)
-  await navigator.serviceWorker.register("service-worker.js");
+  await navigator.serviceWorker.register("/musicportalapp/service-worker.js");
 
   // Firebase messaging service worker
-  const reg = await navigator.serviceWorker.register("firebase-messaging-sw.js");
+  const reg = await navigator.serviceWorker.register("/musicportalapp/firebase-messaging-sw.js");
   messaging.useServiceWorker(reg);
 
   return reg;
