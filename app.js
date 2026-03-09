@@ -8,12 +8,6 @@ const firebaseConfig = {
   appId: "1:831045230249:web:298ed083c299e1b8d413b8"
 };
 
-/**
- *Webpush 
- * BHvo6e4UeUYecrm6vWRkOv6HHGijS86jQGWJKvPmIH7lDTD-5XPyUz_T-xNHjKJIO92fmCtoviVZi_WxanrTprU
- * - PrivateKey: U-jUJaBa8CnB_Qrgc3F4Jat4dkCHf_dpqwaUWDqdn1c
-*/
-
 // ===== 2. Initialize Firebase & Messaging =====
 firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
