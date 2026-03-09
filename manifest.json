@@ -1,7 +1,7 @@
 {
   "name": "Music Team PortalPush App",
   "short_name": "MusicTeamPushApp",
-  "start_url": "./",
+  "start_url": "/musicportalapp/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2196f3",
